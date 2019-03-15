@@ -21,7 +21,7 @@
  * 版权声明 2012，乌龙茶工作室
  * provided by Linliangyi and copyright 2012 by Oolong studio
  */
-package org.wltea.analyzer.sample;
+package test;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
@@ -86,7 +86,7 @@ public class IKAnalzyerDemo {
 
   @Test
   public void test() {
-    analyze("一不做二不休");
+    analyze("张柏芝士蛋糕店");
   }
 
 }

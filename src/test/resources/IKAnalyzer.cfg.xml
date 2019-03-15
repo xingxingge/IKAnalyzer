@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">  
+<properties>  
+	<comment>IK Analyzer 扩展配置</comment>
+	<!--用户可以在这里配置自己的扩展字典
+	<entry key="ext_dict">ext.dic;</entry> 
+	-->
+	<entry key="ext_dict">ext.dic;THUOCL_animal.txt.file;THUOCL_caijing.txt.file;THUOCL_car.txt.file;THUOCL_chengyu.txt.file;THUOCL_diming.txt.file;THUOCL_food.txt.file;THUOCL_it.txt.file;THUOCL_law.txt.file;THUOCL_lishimingren.txt.file;THUOCL_medical.txt.file;THUOCL_poem.txt.file</entry>
+	<!--用户可以在这里配置自己的扩展停止词字典-->
+	<entry key="ext_stopwords">stopword.dic;</entry>
+	
+</properties>
