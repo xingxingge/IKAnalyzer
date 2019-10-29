@@ -1,0 +1,11 @@
+      document.add(fileNameField);
+      document.add(fileSizeField);
+      document.add(filePathField);
+      document.add(fileContentField);
+      //使用indexwriter对象将document对象写入索引库，此过程进行索引创建。并将索引和document对象写入索引库。
+      indexWriter.addDocument(document);
+    }
+    //关闭IndexWriter对象。
+    indexWriter.close();
+  }
+}
