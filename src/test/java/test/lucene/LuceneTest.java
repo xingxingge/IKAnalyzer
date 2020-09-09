@@ -100,6 +100,13 @@ public class LuceneTest extends TestCase {
     //遍历查询结果
     //topDocs.scoreDocs存储了document对象的id
     //ScoreDoc[] scoreDocs = topDocs.scoreDocs;
+    print(indexSearcher, topDocs);
+    //关闭indexreader对象
+    indexReader.close();
+  }
+
+  private void print(IndexSearcher indexSearcher, TopDocs topDocs)
+      throws IOException {
     for (ScoreDoc scoreDoc : topDocs.scoreDocs) {
       //scoreDoc.doc属性就是document对象的id
       //int doc = scoreDoc.doc;
@@ -115,8 +122,6 @@ public class LuceneTest extends TestCase {
       System.out.println(document.get("filePath"));
       System.out.println("----------------------------------");
     }
-    //关闭indexreader对象
-    indexReader.close();
   }
 
   //搜索索引
@@ -138,21 +143,7 @@ public class LuceneTest extends TestCase {
     //遍历查询结果
     //topDocs.scoreDocs存储了document对象的id
     //ScoreDoc[] scoreDocs = topDocs.scoreDocs;
-    for (ScoreDoc scoreDoc : topDocs.scoreDocs) {
-      //scoreDoc.doc属性就是document对象的id
-      //int doc = scoreDoc.doc;
-      //根据document的id找到document对象
-      Document document = indexSearcher.doc(scoreDoc.doc);
-      //文件名称
-      System.out.println(document.get("fileName"));
-      //文件内容
-      System.out.println(document.get("fileContent"));
-      //文件大小
-      System.out.println(document.get("fileSize"));
-      //文件路径
-      System.out.println(document.get("filePath"));
-      System.out.println("----------------------------------");
-    }
+    print(indexSearcher, topDocs);
     //关闭indexreader对象
     indexReader.close();
   }
@@ -183,21 +174,7 @@ public class LuceneTest extends TestCase {
     //遍历查询结果
     //topDocs.scoreDocs存储了document对象的id
     //ScoreDoc[] scoreDocs = topDocs.scoreDocs;
-    for (ScoreDoc scoreDoc : topDocs.scoreDocs) {
-      //scoreDoc.doc属性就是document对象的id
-      //int doc = scoreDoc.doc;
-      //根据document的id找到document对象
-      Document document = indexSearcher.doc(scoreDoc.doc);
-      //文件名称
-      System.out.println(document.get("fileName"));
-      //文件内容
-      System.out.println(document.get("fileContent"));
-      //文件大小
-      System.out.println(document.get("fileSize"));
-      //文件路径
-      System.out.println(document.get("filePath"));
-      System.out.println("----------------------------------");
-    }
+    print(indexSearcher, topDocs);
     //关闭indexreader对象
     indexReader.close();
   }
@@ -229,21 +206,7 @@ public class LuceneTest extends TestCase {
     //遍历查询结果
     //topDocs.scoreDocs存储了document对象的id
     //ScoreDoc[] scoreDocs = topDocs.scoreDocs;
-    for (ScoreDoc scoreDoc : topDocs.scoreDocs) {
-      //scoreDoc.doc属性就是document对象的id
-      //int doc = scoreDoc.doc;
-      //根据document的id找到document对象
-      Document document = indexSearcher.doc(scoreDoc.doc);
-      //文件名称
-      System.out.println(document.get("fileName"));
-      //文件内容
-      System.out.println(document.get("fileContent"));
-      //文件大小
-      System.out.println(document.get("fileSize"));
-      //文件路径
-      System.out.println(document.get("filePath"));
-      System.out.println("----------------------------------");
-    }
+    print(indexSearcher, topDocs);
     //关闭indexreader对象
     indexReader.close();
   }
@@ -275,21 +238,7 @@ public class LuceneTest extends TestCase {
     //遍历查询结果
     //topDocs.scoreDocs存储了document对象的id
     //ScoreDoc[] scoreDocs = topDocs.scoreDocs;
-    for (ScoreDoc scoreDoc : topDocs.scoreDocs) {
-      //scoreDoc.doc属性就是document对象的id
-      //int doc = scoreDoc.doc;
-      //根据document的id找到document对象
-      Document document = indexSearcher.doc(scoreDoc.doc);
-      //文件名称
-      System.out.println(document.get("fileName"));
-      //文件内容
-      System.out.println(document.get("fileContent"));
-      //文件大小
-      System.out.println(document.get("fileSize"));
-      //文件路径
-      System.out.println(document.get("filePath"));
-      System.out.println("----------------------------------");
-    }
+    print(indexSearcher, topDocs);
     //关闭indexreader对象
     indexReader.close();
   }
@@ -319,21 +268,7 @@ public class LuceneTest extends TestCase {
     //遍历查询结果
     //topDocs.scoreDocs存储了document对象的id
     //ScoreDoc[] scoreDocs = topDocs.scoreDocs;
-    for (ScoreDoc scoreDoc : topDocs.scoreDocs) {
-      //scoreDoc.doc属性就是document对象的id
-      //int doc = scoreDoc.doc;
-      //根据document的id找到document对象
-      Document document = indexSearcher.doc(scoreDoc.doc);
-      //文件名称
-      System.out.println(document.get("fileName"));
-      //文件内容
-      System.out.println(document.get("fileContent"));
-      //文件大小
-      System.out.println(document.get("fileSize"));
-      //文件路径
-      System.out.println(document.get("filePath"));
-      System.out.println("----------------------------------");
-    }
+    print(indexSearcher, topDocs);
     //关闭indexreader对象
     indexReader.close();
   }
