@@ -15,12 +15,17 @@ import org.wltea.analyzer.lucene.IKAnalyzer;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 
 public class LuceneTest extends TestCase {
+
+  protected String indexDirectory="./data/lucene/index";
+
+
   //创建索引
   public void testCreateIndex() throws IOException {
     //指定索引库的存放位置Directory对象
-    Directory directory = FSDirectory.open(new File("./data/lucene/index"));
+    Directory directory = FSDirectory.open(new File(indexDirectory));
     //索引库还可以存放到内存中
     //Directory directory = new RAMDirectory();
 
@@ -36,7 +41,7 @@ public class LuceneTest extends TestCase {
     IndexWriter indexWriter = new IndexWriter(directory, config);
 
     //原始文档的路径
-    File file = new File("./data/lucene/searchsource");
+    File file = new File("./data/lucene/docs");
     File[] fileList = file.listFiles();
     for (File file2 : fileList) {
       //创建document对象
@@ -63,7 +68,7 @@ public class LuceneTest extends TestCase {
       Field filePathField = new StoredField("filePath", filePath);
 
       //文件内容
-      String fileContent = FileUtils.readFileToString(file2);
+      String fileContent = FileUtils.readFileToString(file2, Charset.defaultCharset());
       //String fileContent = FileUtils.readFileToString(file2, "utf-8");
       //文件内容域
       Field fileContentField = new TextField("fileContent", fileContent, Field.Store.YES);
@@ -79,7 +84,6 @@ public class LuceneTest extends TestCase {
     indexWriter.close();
   }
 
-  protected String indexDirectory="./data/lucene/index";
   public void testMatchAllDocsQuery() throws Exception {
     //创建一个Directory对象，指定索引库存放的路径
     Directory directory = FSDirectory.open(new File(indexDirectory));
